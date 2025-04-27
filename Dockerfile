@@ -50,6 +50,7 @@ ADD *snapshot*.json /
 
 # Restore the snapshot to install custom nodes
 RUN /restore_snapshot.sh
+RUN pip install boto3==1.28.31
 
 # Start container
 CMD ["/start.sh"]
